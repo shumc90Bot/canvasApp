@@ -20,3 +20,11 @@ Page 3 - Reference
 It is a reference page for the design idea of Canvas App. 
 
 ###############################
+
+The Feature of the Canvas App:
+1. Drawing Rectangle
+2. Drawing Circle
+3. Drawing Straight Line
+4. Drawing a curved line
+5. A point and drag eraser function
+6. clear whole canva
