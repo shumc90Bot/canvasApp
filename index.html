@@ -34,8 +34,8 @@
         >Draw Rectangle</span>
 
         <!-- The drawing line button  -->
-        <span class="btn btn-info fa fa-paint-brush" id="drawing-line"
-        >Draw Line</span
+        <span class="btn btn-info fa fa-paint-brush" id="pen"
+        >Pen</span
         >
 
         <!-- The eraser button  -->
@@ -63,7 +63,7 @@
 
     <!-- The drawing line functionality  -->
     <script
-      src="./javascript/drawing-line.js"
+      src="./javascript/pen.js"
       type="text/javascript"
     ></script>
     <!-- The drawing rectangle functionality  -->
@@ -86,8 +86,8 @@
           $("#drawing-rectangle").click(() => {
             currentFunction = new DrawingRectangle(contextReal, contextDraft);
           });
-          $("#drawing-line").click(() => {
-            currentFunction = new DrawingLine(contextReal);
+          $("#pen").click(() => {
+            currentFunction = new Pen(contextReal);
           });
           $("#eraser")  .click(() => {
             currentFunction = new Eraser(contextReal);
