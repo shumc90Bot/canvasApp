@@ -7,24 +7,39 @@ class Eraser extends PaintFunction {
     // This class extends the PaintFunction class
     constructor(contextReal) {
         super();
-        this.contextReal = contextReal;
+        this.context = contextReal;
     }
 
     onMouseDown(coord, event) {
+        // Width of line
         this.strokeSize = 5;
-        contextReal.clearRect(coord[0], coord[1], this.strokeSize, this.strokeSize)
+        // Drawing the line here
+        this.context.beginPath();
+        this.context.moveTo(coord[0], coord[1]);
+        // Turn on the eraser
+        this.context.globalCompositeOperation = "destination-out";
     }
+
     onDragging(coord, event) {
-        this.strokeSize = 5;
-        contextReal.clearRect(coord[0], coord[1], this.strokeSize, this.strokeSize);
+        this.draw(coord[0], coord[1]);
     }
+
     onMouseMove() { }
-    onMouseUp() { }
-    onMouseLeave() { }
+
+    onMouseUp(coord) {
+        // Turn off the eraser
+        this.context.globalCompositeOperation = "source-over";
+    }
+    onMouseLeave() {
+        // Turn off the eraser
+        this.context.globalCompositeOperation = "source-over";
+    }
     onMouseEnter() { }
 
     draw(x, y) {
+        //
         this.context.lineTo(x, y);
+        // Draw the line onto the page
         this.context.stroke();
     }
 }
