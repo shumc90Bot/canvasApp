@@ -163,4 +163,56 @@
 .bg {
     width: auto;
     height: 1024px;
+    display: flex
+}
+
+.container {
+    padding: 4px 4px 4px 4px;
+    margin: 4px 4px 4px 4px;
+}
+
+.container-fluid {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.Top {
+    width: auto;
+    height: 80px; 
+    position: relative;
+    border-bottom: 4px var(--Black50) solid;
+    display: flex
+}
+
+.Logo {
+    position: absolute;
+    text-align: left;
+    padding-top: 12px;
+    display: flex
+}
+
+.ToolBar {
+    width: auto;
+    height: 880px;
+    position: relative;
+}
+
+.Footer {
+    position: relative;
+    text-align: center;
+    display: flex
+}
+
+/* Icon */
+.icon {
+    padding: 4px;
+    margin: 0px;
+    border-radius: 8px; 
+    overflow: hidden; 
+    border: 4px #F0EFF4 solid;
+}
+
+.btn {
+    margin: auto;
+    padding: auto;
 }
