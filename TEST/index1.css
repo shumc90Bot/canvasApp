@@ -23,7 +23,7 @@
 
 /* Font */
 .h1 {
-    font-family: ".SF Compact Rounded";
+    font-family: '.SF Compact Rounded', sans-serif;
     font-size: 63px;
     font-style: normal;
     font-weight: 943;
@@ -31,7 +31,7 @@
 }
 
 .h2 {
-    font-family: ".SF Compact Rounded";
+    font-family: ".SF Compact Rounded", sans-serif;
     font-size: 47px;
     font-style: normal;
     font-weight: 943;
@@ -39,7 +39,7 @@
 }
 
 .h3 {
-    font-family: ".SF Compact Rounded";
+    font-family: ".SF Compact Rounded", sans-serif;
     font-size: 36px;
     font-style: normal;
     font-weight: 794;
@@ -47,7 +47,7 @@
 }
 
 .b1 {
-    font-family: ".SF Compact Rounded";
+    font-family: ".SF Compact Rounded", sans-serif;
     font-size: 27px;
     font-style: normal;
     font-weight: 794;
@@ -55,7 +55,7 @@
 }
 
 .b2 {
-    font-family: ".SF Compact Rounded";
+    font-family: ".SF Compact Rounded", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 656;
@@ -63,7 +63,7 @@
 }
 
 .b3 {
-    font-family: ".SF Compact Rounded";
+    font-family: ".SF Compact Rounded", sans-serif;
     font-size: 15px;
     font-style: normal;
     font-weight: 556;
@@ -71,7 +71,7 @@
 }
 
 .f {
-    font-family: ".SF Compact Rounded";
+    font-family: ".SF Compact Rounded", sans-serif;
     font-size: 11px;
     font-style: normal;
     font-weight: 556;
@@ -169,11 +169,15 @@
 .container {
     padding: 4px 4px 4px 4px;
     margin: 4px 4px 4px 4px;
+    width: auto;
+    height: auto;
 }
 
 .container-fluid {
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
+    width: auto;
+    height: auto;
 }
 
 .Top {
@@ -187,8 +191,8 @@
 .Logo {
     position: absolute;
     text-align: left;
-    padding-top: 12px;
-    display: flex
+    padding-top: 16px;
+    display: flex;
 }
 
 .ToolBar {
@@ -215,4 +219,12 @@
 .btn {
     margin: auto;
     padding: auto;
+}
+
+.btn-bd-primary {
+    --bs-btn-color: var(--White100);
+    --bs-btn-hover-color: var(--Pink50);
+    --bs-btn-hover-bg: var(--Pink50);
+    --bs-btn-active-color: var(--Pink100) ;
+    --bs-btn-active-bg: var(--Pink100);
 }
