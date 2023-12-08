@@ -12,6 +12,34 @@ let dragging = false;
 let strokeWidth;
 let strokeColor;
 
+$(() => {
+  $("#drawing-rectangle").click(() => {
+    currentFunction = new DrawingRectangle(contextReal, contextDraft);
+  });
+  $("#pen").click(() => {
+    currentFunction = new Pen(contextReal);
+  });
+  $("#eraser").click(() => {
+    currentFunction = new Eraser(contextReal);
+  });
+  currentFunction = new DrawingCircle(contextReal)
+  $("#drawing-circle").click(() => {
+    currentFunction = new DrawingCircle(contextReal, contextDraft);
+  });
+  $("#drawing-text").click(() => {
+    currentFunction = new DrawingText(contextReal, contextDraft);
+  })
+  currentFunction = new DrawingstraightLine(contextReal)
+  $("#drawing-straightLine").click(() => {
+    currentFunction = new DrawingstraightLine(contextReal, contextDraft);
+  });
+  currentFunction = new DrawingCurveLine(contextReal)
+  $("#drawing-curveLine").click(() => {
+    currentFunction = new DrawingCurveLine(contextReal, contextDraft);
+  });
+
+})
+
 $("#canvas-draft").mousedown(function (e) {
     let mouseX = e.offsetX;
     let mouseY = e.offsetY;
