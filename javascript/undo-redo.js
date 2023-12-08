@@ -18,10 +18,10 @@ function undo() {
     if (undoStack.length === 0) {
         return;
     } else if (undoStack.length === 1) {
-        contextReal.fillStyle = "#ffffff";
+        contextReal.fillStyle = "##F0EFF4";
         contextReal.fillRect(0, 0, canvasDraft.width, canvasDraft.height);
     } else if (undoStack.length > 1) {
-        contextReal.fillStyle = "#ffffff";
+        contextReal.fillStyle = "#F0EFF4";
         contextReal.fillRect(0, 0, canvasDraft.width, canvasDraft.height);
         let undoImg = new Image();
         undoImg.src = undoStack[undoStack.length - 2];
@@ -38,7 +38,7 @@ function redo() {
     if (redoStack.length === 0) {
         return;
     } else if (redoStack.length > 0) {
-        contextReal.fillStyle = "#ffffff";
+        contextReal.fillStyle = "##F0EFF4";
         contextReal.fillRect(0, 0, canvasDraft.width, canvasDraft.height);
         let redoImg = new Image();
         redoImg.src = redoStack[redoStack.length - 1];
