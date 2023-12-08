@@ -13,14 +13,14 @@ class DrawingRectangle extends PaintFunction {
   }
 
   onMouseDown(coord, event) {
-    this.contextReal.fillStyle = "#f44";
+    this.contextReal.fillStyle = strokeColor;
     this.origX = coord[0];
     this.origY = coord[1];
   }
 
   onDragging(coord, event) {
     // Manipulating the context draft
-    this.contextDraft.fillStyle = "#f44";
+    this.contextDraft.fillStyle = strokeColor;
     // Allows you to actually draw out your squares
     this.contextDraft.clearRect(
       0,
@@ -37,7 +37,7 @@ class DrawingRectangle extends PaintFunction {
     );
   }
 
-  onMouseMove() {}
+  onMouseMove() { }
 
   // Committing the element to the canvas
   onMouseUp(coord) {
@@ -56,7 +56,9 @@ class DrawingRectangle extends PaintFunction {
       coord[0] - this.origX,
       coord[1] - this.origY
     );
+    // Save the drwan path in Undo stack of undo.js
+    saveStroke();
   }
-  onMouseLeave() {}
-  onMouseEnter() {}
+  onMouseLeave() { }
+  onMouseEnter() { }
 }
