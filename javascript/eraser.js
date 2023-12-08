@@ -12,12 +12,14 @@ class Eraser extends PaintFunction {
 
     onMouseDown(coord, event) {
         // Width of line
-        this.strokeSize = 5;
+        this.context.lineWidth = strokeWidth;
         // Drawing the line here
         this.context.beginPath();
         this.context.moveTo(coord[0], coord[1]);
         // Turn on the eraser
         this.context.globalCompositeOperation = "destination-out";
+        // Point eraser
+        this.context.clearRect(coord[0], coord[1], strokeWidth, strokeWidth);
     }
 
     onDragging(coord, event) {
@@ -29,11 +31,10 @@ class Eraser extends PaintFunction {
     onMouseUp(coord) {
         // Turn off the eraser
         this.context.globalCompositeOperation = "source-over";
+        // Save the drwan paht in undo.js' Undo stack
+        saveStroke();
     }
-    onMouseLeave() {
-        // Turn off the eraser
-        this.context.globalCompositeOperation = "source-over";
-    }
+    onMouseLeave() { }
     onMouseEnter() { }
 
     draw(x, y) {
