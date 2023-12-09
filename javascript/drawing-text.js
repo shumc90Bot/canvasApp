@@ -22,4 +22,8 @@ class DrawingText extends PaintFunction {
             this.textY = [];
         }
     }
+    onMouseUp() {
+        // Save the drwan paht in undo.js' Undo stack
+        saveStroke();
+    }
 }

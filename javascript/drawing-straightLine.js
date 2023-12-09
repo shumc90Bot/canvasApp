@@ -33,16 +33,16 @@ class DrawingstraightLine extends PaintFunction {
     this.contextDraft.beginPath();
 
     // Define a start point
-    this.contextDraft.moveTo(this.origX,this.origY) ;
+    this.contextDraft.moveTo(this.origX, this.origY);
 
     // Define an end point
-    this.contextDraft.lineTo(coord[0],coord[1]);
+    this.contextDraft.lineTo(coord[0], coord[1]);
 
     // Draw it
     this.contextDraft.stroke();
   }
 
-  onMouseMove() {}
+  onMouseMove() { }
 
   // Committing the element to the canvas
   onMouseUp(coord) {
@@ -57,10 +57,12 @@ class DrawingstraightLine extends PaintFunction {
     // Without this commit, it won't actually draw
     this.contextReal.beginPath();
     this.contextReal.moveTo(this.origX, this.origY);
-    this.contextReal.lineTo(coord[0],coord[1]);
+    this.contextReal.lineTo(coord[0], coord[1]);
     this.contextReal.fillStyle = strokeColor;
     this.contextReal.stroke()
+    // Save the drwan path in Undo stack of undo.js
+    saveStroke();
   }
-  onMouseLeave() {}
-  onMouseEnter() {}
+  onMouseLeave() { }
+  onMouseEnter() { }
 }

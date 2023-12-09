@@ -6,8 +6,8 @@ $('#brush-width').change(() => {
 
 // Change Stroke Color
 
-$('#colorStroke').change(() => {
- strokeColor = $(`#colorStroke`).val()
+$('.colorStroke').change(() => {
+ strokeColor = $(`.colorStroke`).val()
 })
 
 // Save Imgae function
