@@ -3,8 +3,8 @@
 .canvas {
     border: 2px var(--Pink30) solid;
     position: absolute;
-    top: 12%;
-    left: 160px;
+    top: 9%;
+    left: 152px;
 }
 
 #canvas-draft {
@@ -18,7 +18,7 @@
 
 /* Text input function */
 #textInput {
-    display: block;
+    display: none;
     position: absolute;
     z-index: 5;
     background-color: transparent;
@@ -91,7 +91,7 @@ body {
     line-height: 120%;
 }
 
-body1 {
+.body1 {
     font-family: "SF Compact Rounded", sans-serif;
     font-size: 15px;
     font-style: normal;
@@ -339,6 +339,7 @@ footer {
 }
 
 .btn-bd-secondary {
+    --bs-btn-color: var(--White100);
     --bs-btn-hover-color: var(--White70);
     --bs-btn-hover-bg: var(--Orange70);
     --bs-btn-active-color: var(--Pink100);
