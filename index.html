@@ -4,39 +4,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Canvas</title>
   <!-- index.css -->
   <link rel="stylesheet" type="text/css" href="./index.css">
   <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   <!-- jscolor -->
-  <script src="/javascript/jscolor.js" defer></script>
+  <script src="./javascript/jscolor.js" defer></script>
   <!-- The drawing functionality  -->
-  <script src="/javascript/canvas-comon.js" defer></script>
+  <script src="./javascript/canvas-comon.js" defer></script>
   <!-- The drawing line functionality  -->
-  <script src="/javascript/pen.js" defer></script>
+  <script src="./javascript/pen.js" defer></script>
   <!-- The drawing rectangle functionality  -->
-  <script src="/javascript/drawing-rectangle.js" defer></script>
+  <script src="./javascript/drawing-rectangle.js" defer></script>
   <!-- The drawing circle functionality  -->
-  <script src="/javascript/drawing-circle.js" defer></script>
+  <script src="./javascript/drawing-circle.js" defer></script>
   <!-- The undo & redo functionality  -->
-  <script src="/javascript/undo-redo.js" defer></script>
+  <script src="./javascript/undo-redo.js" defer></script>
   <!-- The eraser functionality -->
-  <script src="/javascript/eraser.js" defer></script>
+  <script src="./javascript/eraser.js" defer></script>
   <!-- The color picker -->
-  <script src="/javascript/Color-picker" defer></script>
+  <script src="./javascript/jscolor.js" defer></script>
   <!-- The drawing text functionality -->
-  <script src="/javascript/drawing-text.js" defer></script>
+  <script src="./javascript/drawing-text.js" defer></script>
   <!-- Utilities -->
-  <script src="/javascript/utilities.js" defer></script>
+  <script src="./javascript/utilities.js" defer></script>
   <!-- The drawing straight line funcionality -->
-  <script src="/javascript/drawing-straightLine.js" defer></script>
+  <script src="./javascript/drawing-straightLine.js" defer></script>
   <!-- The drawing Curve line funcionality -->
-  <script src="/javascript//drawing-curveLine.js" defer></script>
+  <script src="./javascript//drawing-curveLine.js" defer></script>
 </head>
 
 <body>
@@ -60,74 +58,70 @@
         <div class="row">
           <div style="display: auto;">
             <!-- Rectangle -->
-            <p class="btn btn-bd-primary container"><img class="icon" id="drawing-rectangle" src="./icon/rectangle.png"
-                alt="Rectangle"></p>
+            <p class="btn btn-bd-primary container"><img class="icon" id="drawing-rectangle" src="./icon/rectangle.png" alt="Rectangle"></p>
             <!-- Circle -->
-            <p class="btn btn-bd-primary container"><img class="icon" id="drawing-circle" src="./icon/circle.png"
-                alt="Circle"></p>
+            <p class="btn btn-bd-primary container"><img class="icon" id="drawing-circle" src="./icon/circle.png" alt="Circle"></p>
           </div>
           <div style="display: auto;">
             <!-- Line -->
-            <p class="btn btn-bd-primary container"><img class="icon" id="drawing-straightLine" src="./icon/line.png"
-                alt="Line"></p>
+            <p class="btn btn-bd-primary container"><img class="icon" id="drawing-straightLine" src="./icon/line.png" alt="Line"></p>
             <!-- Curved -->
-            <p class="btn btn-bd-primary container"><img class="icon" id="drawing-curveLine" src="./icon/curved.png"
-                alt="Curved"></p>
+            <p class="btn btn-bd-primary container"><img class="icon" id="drawing-curveLine" src="./icon/curved.png" alt="Curved"></p>
           </div>
           <div style="display: auto;">
             <!-- Eraser -->
             <p class="btn btn-bd-primary container"><img class="icon" id="eraser" src="./icon/eraser.png" alt="Eraser">
             </p>
             <!-- Font -->
-            <p class="btn btn-bd-primary container"><img class="icon" id="drawing-text" src="./icon/font.png"
-                alt="Font"></p>
+            <p class="btn btn-bd-primary container"><img class="icon" id="drawing-text" src="./icon/font.png" alt="Font"></p>
           </div>
           <div style="display: auto;">
             <!-- Pen -->
             <p class="btn btn-bd-primary container"><img class="icon" id="pen" src="./icon/pen.png" alt="Pen"></p>
           </div>
-          <!-- The Color picker -->
-          <div class="container" style="display: auto; padding-right: 4px;">
-            <body1><input class="container" style="border-radius: 4px; border: 2px var(--White100) solid;"
-                id="colorStroke" data-jscolor="{preset:'dark', width:250, paletteCols:15}" value="#000000"></body1>
+          <div class="container">
+            <!-- The Color picker -->
+            <div class="container icon" style="display: auto; height: auto; width: 120px;">
+              <button data-jscolor="{valueElement:'#val4', alphaElement:'#alp4'}" class="jscolor"
+                type="button" data-current-color="#B9BBFF80"
+                style="min-width: 88px !important; background-image: linear-gradient(to right, rgba(185, 187, 255, 0.5) 0%, rgba(185, 187, 255, 0.5) 100%), url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAADBJREFUOE9jnDlz5n8GPODs2bP4pBkYRw0YFmGQlpaGNx0YGxvjTwejBjAwDv0wAADeiz/pRWnBmQAAAABJRU5ErkJggg==&quot;) !important; background-position: left top, left top !important; background-size: auto, 16px 16px !important; background-repeat: repeat, repeat !important; background-origin: padding-box, padding-box !important;">&nbsp;</button>
+              <body1><input id="val4" class="colorStroke container-fluid" value="#000000" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></body1>
+            </div>
           </div>
         </div>
-        <div>
-          <!-- Redo -->
-          <p class="btn btn-bd-primary col-sm-4"><img class="icon" id="redo" src="./icon/redo.png" alt="redo"></p>
-          <!-- Undo -->
-          <p class="btn btn-bd-primary col-sm-4"><img class="icon" id="undo" src="./icon/undo.png" alt="undo"></p>
+        <div style="display: flex; width: auto; height: 22%;">
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <!-- Redo -->
+            <p class="col-sm-6"><img class="btn btn-bd-primary" style="border: 4px var(--White100) solid;" id="redo" src="./icon/redo.png" alt="redo"></p>
+            <!-- Undo -->
+            <p class="col-sm-6"><img class="btn btn-bd-primary" style="border: 4px var(--White100) solid;" id="undo" src="./icon/undo.png" alt="undo"></p>
+          </div>
         </div>
         <!-- Save -->
-        <div id="saveImg" class="container">
+        <div id="saveImg">
           <div class="container">
-            <div class="bg-orange100 row" style="border-radius: 8px;">
-              <p class="btn btn-bd-secondary container">
-
-                <body><strong>Save</strong></body>
-              </p>
+            <div class="bg-orange100" style="border-radius: 8px; border: 4px var(--Orange100) solid;">
+              <p class="btn btn-bd-secondary container"><strong>Save</strong></p>
             </div>
           </div>
         </div>
         <!-- Clear -->
-        <div class="container">
+        <div id="clear">
           <div class="container">
-            <div id="clear" style="border-radius: 8px;border: 2px var(--White100) solid; text-align: center;">
-              <p class="btn container">
-
-                <body><strong>Clear</strong></body>
-              </p>
+            <div class="icon">
+              <p class="btn btn-bd-primary container"><strong>Clear</strong></p>
             </div>
           </div>
         </div>
       </div>
+      <!-- Canvas -->
       <div class="canvas-container bg-white100 container-fluid col-sm-11">
         <div class="container">
-          <canvas id="canvas-real" class="canvas" width="1420px" height="800px">
-          </canvas>
-          <canvas id="canvas-draft" class="canvas" width="1420px" height="800px">
-          </canvas>
-          <input id="textInput" name="inputField" value="">
+          <canvas id="canvas-real" class="canvas col-sm-11"></canvas>
+          <canvas id="canvas-draft" class="canvas col-sm-11"></canvas>
+          <input id="textInput" name="inputField" value="Input Something">
         </div>
       </div>
     </div>
@@ -136,12 +130,15 @@
   <section id="Footer">
     <div class="row">
       <div class="bg-black100 container-fluid col-sm-12">
-        <footer class="white30 container" style="text-align: center;">
-          Copyright @ Andrea Cheng, Feddy Ng, Ken Ho, and Ken Tsang . 2023
-        </footer>
+        <footer class="white30 container" style="text-align: center;">Copyright @ Andrea Cheng, Feddy Ng, and Ken Tsang . 2023</footer>
       </div>
     </div>
   </section>
+
+  
+
+ 
+
   <script>
     $(() => {
       $("#drawing-rectangle").click(() => {
